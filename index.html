@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ángel Calle Chavarría - Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Cabecera / Quién eres */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+
+    .role {
+      font-size: 1.125rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .bio {
+      color: var(--text-muted);
+    }
+
+    /* Secciones */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.375rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    /* Tecnologías */
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      list-style: none;
+    }
+
+    .tech-list li {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Proyectos */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .project-link:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    /* Contacto */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: #e2e8f0;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    /* Adaptación a móviles */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .contact-links {
+        flex-direction: column;
+      }
+      .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- 1. QUIÉN ERES -->
+    <header>
+      <!-- Avatar con tus iniciales. Si subes una foto llamada foto.jpg, cambia este div por: <img src="foto.jpg" alt="Foto de [Tu Nombre]" class="avatar"> -->
+      <div class="avatar" aria-hidden="true">Án</div>
+      <div>
+        <h1>Ángel Calle Chavarría</h1>
+        <p class="role">Soy estudiante de grado superior de Desarrollo de Aplicaciones Web</p>
+        <p class="bio">Soy una persona dispuesta a aprender nuevas tecnologias y crear nuevos proyectos con HTML, JavaScript y PHP.</p>
+      </div>
+    </header>
+
+    <!-- 2. TUS TECNOLOGÍAS -->
+    <section aria-labelledby="tech-title">
+      <h2 id="tech-title">Tecnologías</h2>
+      <ul class="tech-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Git y GitHub</li>
+        <!-- Añade o borra elementos <li> según las herramientas que uses -->
+      </ul>
+    </section>
+
+    <!-- 3. TUS PROYECTOS -->
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">Proyectos</h2>
+      <div class="projects-grid">
+        
+        <article class="project-card">
+          <div>
+            <h3>Proyecto 1: HTML</h3>
+            <p>Es una pagina web básica donde se muestran imagenes y toda la página web es responsive. Adapta el tamaño de las etiquetas al de la ventana del navegador.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Proyecto 2: JavaScript</h3>
+            <p>Es una lista de tareas donde se puede añadir y quitar tareas mediante botones.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Proyecto 3: JavaScript</h3>
+            <p>Mediante un botón, pide el numero de filas y columnas para crear una tabla con el numero de la columna a la que corresponde cada hueco de la tabla.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 4. CÓMO CONTACTARTE -->
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Contacto</h2>
+      <div class="contact-links">
+        <a href="mailto:acc0071@alu.medac.es" class="btn">Enviar correo</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Ángel Calle Chavarría. Publicado con GitHub Pages.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
